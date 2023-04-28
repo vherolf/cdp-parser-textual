@@ -23,5 +23,4 @@ def cdp_monitor_callback(pkt):
 interface="eno1"
 capturefilter="ether dst 01:00:0c:cc:cc:cc"
  
-# run it for max. 99 Packets
 p=sniff(prn=cdp_monitor_callback, iface=interface, count=1, filter=capturefilter, store=0)
