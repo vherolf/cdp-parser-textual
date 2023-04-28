@@ -7,6 +7,11 @@ cisco cdp parser for remote switches
 depends on textual, scapy and psutil
 
 ```
+sudo -i
+<clone repo>
+cd cdp-parser-textual
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
