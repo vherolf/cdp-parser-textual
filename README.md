@@ -22,3 +22,11 @@ run the script
 ```
 python cdp-parser-textual.py
 ```
+
+# tcpdump
+
+this script does the same as the tcpdump below, but is written in python
+
+```
+sudo tcpdump -nn -v -i en0 -s 1500 'ether[20:2] == 0x2000'
+```
