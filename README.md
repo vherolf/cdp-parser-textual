@@ -1,5 +1,5 @@
 # cdp-parser-textual
-cisco cdp parser for remote switches
+cisco cdp parser for remote switches (port and name)
 
 
 # requirements
