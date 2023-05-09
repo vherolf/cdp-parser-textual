@@ -1,10 +1,11 @@
-# discover switchport
-A pure python script to scan the remote switch you are connected to and gives back port, name, vlan, ... using Cisco Discovery Protocol.
+# Discover Cisco switchport
+
+A pure python script to scan the remote Cisco switch you are connected to and gives back port, name, vlan, ... using Cisco Discovery Protocol.
 
 
-# requirements
+# Install
 
-depends on textual, scapy and psutil
+Depends on textual, scapy and psutil.
 
 ```
 sudo -s
@@ -15,9 +16,9 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-# running
+# Running
 
-the script has to be run as root (required vor promicous mode)
+The script has to be run as root (required for promicous mode)
 
 first change to root
 ```
@@ -31,7 +32,7 @@ python cdp-parser-tui.py
 
 # tcpdump
 
-this script does the same as the tcpdump below, but is written in python
+This script does the same as the tcpdump below, but its written in python.
 
 ```
 sudo tcpdump -nn -v -i en0 -s 1500 'ether[20:2] == 0x2000'
