@@ -26,7 +26,7 @@ source venv/bin/activate
 ```
 run the script
 ```
-python cdp-parser-textual.py
+python cdp-parser-tui.py
 ```
 
 # tcpdump
