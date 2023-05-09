@@ -1,5 +1,5 @@
-# cdp-parser-textual
-cisco cdp parser for remote switches (port and name)
+# discover switchport
+A pure python script to scan the remote switch you are connected to and gives back port, name, vlan, ... using Cisco Discovery Protocol.
 
 
 # requirements
