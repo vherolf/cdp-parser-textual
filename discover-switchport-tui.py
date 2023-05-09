@@ -1,9 +1,9 @@
 from textual.app import App, ComposeResult
 from textual.reactive import reactive
 from textual.widget import Widget
-from textual.widgets import Input, Button, Label, Header, Footer, Static, TextLog, ListView, ListItem
+from textual.widgets import Button, Footer, Header, Static
 from textual import events
-from textual.containers import VerticalScroll
+from textual.containers import Container, Horizontal
 
 import psutil
 
@@ -22,27 +22,27 @@ class Result(Widget):
         
 class CDPScanApp(App):
     TITLE = "CDP Scan App"
-    CSS= """Screen {
-            align: center middle;
+    BINDINGS = [("d", "toggle_dark", "Toggle dark mode")]
+    CSS= """Button {
+                width: 1fr;
             }
-
-            ListView {
-                width: 30;
+            Result {
+                width: auto;
                 height: auto;
-                margin: 2 2;
             }
-
-            Label {
-                padding: 1 2;
-            } 
+            Static {
+                border: round white;
+            }
         """
 
     def compose(self) -> ComposeResult:
+        yield Header()
+        yield Static("Select a network interface and than hit the scan button at the bottom")
         for item in psutil.net_if_addrs().keys():
             yield Button(label=item, id=item)
-        yield Button("Scan", id="scan", variant="primary", disabled=False)
         yield Result()
-        #yield VerticalScroll(Static(id="results"), id="results-container")
+        yield Button("Scan", id="scan", variant="primary", disabled=False)
+        yield Footer()
         
     def analyze(self, pkt) -> None:
         """ scan for cdp package"""
