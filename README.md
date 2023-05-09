@@ -7,7 +7,7 @@ A pure python script to scan the remote switch you are connected to and gives ba
 depends on textual, scapy and psutil
 
 ```
-sudo -i
+sudo -s
 <clone repo>
 cd cdp-parser-textual
 python3 -m venv venv
@@ -21,10 +21,10 @@ the script has to be run as root (required vor promicous mode)
 
 first change to root
 ```
-sudo -i
+sudo -s
 source venv/bin/activate
 ```
-run the script
+run the script (and wait a bit - scan can be up to 45 sec)
 ```
 python cdp-parser-textual.py
 ```
