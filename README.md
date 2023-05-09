@@ -22,6 +22,7 @@ the script has to be run as root (required vor promicous mode)
 first change to root
 ```
 sudo -i
+source venv/bin/activate
 ```
 run the script
 ```
