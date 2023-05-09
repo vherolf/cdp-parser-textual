@@ -24,7 +24,7 @@ first change to root
 sudo -s
 source venv/bin/activate
 ```
-run the script (and wait a bit - scan can be up to 45 sec)
+run the script
 ```
 python cdp-parser-textual.py
 ```
